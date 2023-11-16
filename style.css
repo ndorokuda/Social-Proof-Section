@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+
+:root{
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: League Spartan;
+    font-size: 15px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px;
+    background-image: url('./images/bg-pattern-top-desktop.svg'), url('./images/bg-pattern-bottom-desktop.svg');
+    background-repeat: no-repeat;
+}
+
+.heading{
+    font-size: 2.5rem;
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.products-description p{
+    color: var(--dark-grayish-magenta);
+    margin-top: 30px;
+    line-height: 1.2rem;
+    font-weight: 500;
+}
+
+.new-line{
+    display: block;
+}
+
+.top-section{
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.equal-columns{
+    flex: 1;
+}
+.ratings{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.rating{
+    background-color: var(--light-grayish-magenta);
+    border-radius: 5px;
+    padding: 15px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    color: var(--very-dark-magenta);
+    font-weight: 700;
+}
+
+.rating-2{
+    align-self: center;
+}
+
+.rating-3{
+    align-self: end;
+}
+
+
+
+.stars{
+    margin-right: 10px;
+}
+
+.icon-star{
+    margin-right: 3px;
+}
+.reviews{
+    display: flex;
+    gap: 30px;
+    height: 250px;
+}
+
+.reviews > .review > .header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.reviews > .review > .header > .header-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review{
+    background-color: var(--very-dark-magenta);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.review-1{
+    align-self: flex-start;
+}
+
+.review-2{
+    align-self: center;
+}
+
+.review-3{
+    align-self: end;
+}
+
+.name-verified-buyer h3{
+    padding-bottom: 5px;
+}
+
+.name-verified-buyer p{
+    color: var(--soft-pink);
+}
+
+.review-body p{
+    line-height: 1.4rem;
+}
+
+@media (max-width: 720px){
+
+    .container{
+        background-image: url('./images/bg-pattern-top-mobile.svg');
+        background-size: contain;
+        padding: 30px;
+    }
+
+    .top-section{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ratings{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        gap: 25px;
+        
+    }
+
+    .rating{
+        display: flex;
+        flex-direction: column;
+        gap: 10px
+    }
+ 
+    .rating-3{
+        align-self: center;
+    }
+
+    .reviews{
+        flex-direction: column;
+    }
+
+}
+
+
